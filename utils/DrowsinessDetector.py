@@ -13,8 +13,8 @@ class DrowsinessDetector:
     EYE_ASPECT_RATIO_THR = 0.3
     EYE_ASPECT_RATIO_CNSCTV_FRAMES = 48
 
-    def __init__(self, driver_path, shape_predictor, url, webcam):
-        self.driver_path = driver_path
+    def __init__(self, driver_info, shape_predictor, url, webcam):
+        self.driver_info = driver_info
         self.url = url
         self.webcam = webcam
 
