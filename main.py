@@ -5,9 +5,10 @@ from utils.DrowsinessDetector import DrowsinessDetector
 
 
 def main():
-    json_file = open('./utils/driver_info.json')
+    driver_path = Path.cwd() / 'utils' / 'driver_info.json'
+    json_file = open(driver_path)
     driver_info = json.load(json_file)
-    shape_predictor = './detectors/shape_predictor_68_face_landmarks.dat'
+    shape_predictor = str(Path.cwd() / 'detectors' / 'shape_predictor_68_face_landmarks.dat')
     url = 'https://drowsiness-detector-d7660.firebaseio.com/dangers.json'
     webcam = 0
 

@@ -71,6 +71,7 @@ class DrowsinessDetector:
                         alert_level = 1
                         self.driver_info['alert_level'] = alert_level
                         if not self.alarm_1:
+                            self.driver_info['curr_time'] = int(time.time())
                             r = requests.post(url = self.url, json = self.driver_info)
                             print(r.content)
                             self.alarm_1 = True
@@ -79,6 +80,7 @@ class DrowsinessDetector:
                             alert_level = 2
                             self.driver_info['alert_level'] = alert_level
                             if not self.alarm_2:
+                                self.driver_info['curr_time'] = int(time.time())
                                 r = requests.post(url = self.url, json = self.driver_info)
                                 print(r.content)
                                 self.alarm_2 = True
