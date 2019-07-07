@@ -13,8 +13,8 @@ from scipy.spatial import distance as dist
 class DrowsinessDetector:
     def __init__(self, driver_info, shape_predictor, url, webcam):
         self.EYE_ASPECT_RATIO_THR = 0.2
-        self.EYE_ASPECT_RATIO_CNSCTV_FRAMES_1 = 64
-        self.EYE_ASPECT_RATIO_CNSCTV_FRAMES_2 = 128
+        self.EYE_ASPECT_RATIO_CNSCTV_FRAMES_1 = 32
+        self.EYE_ASPECT_RATIO_CNSCTV_FRAMES_2 = 64
         
         self.driver_info = driver_info
         self.url = url
